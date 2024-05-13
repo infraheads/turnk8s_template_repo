@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: infra-logo
+  name: infra-logo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infra-logo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: infra-logo
+    spec:
+      containers:
+      - image: mkoyanlabs/infra-logo:v1.0
+        name: infra-logo
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: infra-logo-service
+  labels:
+    app: infra-logo
+spec:
+  type: LoadBalancer
+  selector:
+    app: infra-logo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
