@@ -6,7 +6,7 @@ metadata:
   labels:
     app: infra-logo
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: infra-logo
   ports:
